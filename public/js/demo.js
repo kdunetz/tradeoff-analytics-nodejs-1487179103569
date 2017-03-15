@@ -58,6 +58,9 @@
       showInputCode();
       var cols = problem.columns.filter(function(col){
         var type = col.type && col.type.toLowerCase();
+console.log("1" + col.type);
+console.log("2" + col.type.toLowerCase());
+console.log("3" + type);
         return _.contains(['numeric', 'categorical', 'datetime'], type);
       });
 
@@ -194,6 +197,7 @@
       .then(function(result){
         analyzedCols = selectedColumns;
         showOutputCode(result.resolution);
+console.log(JSON.stringify(result));
         var winners = result.resolution.solutions.filter(function(s) {
           return s.status === 'FRONT';
         }).map(function(w) {

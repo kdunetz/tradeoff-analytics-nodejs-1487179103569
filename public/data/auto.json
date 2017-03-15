@@ -12,7 +12,7 @@
     },
     {
       "key": "engineSize",
-      "full_name": "Engine Volume",
+      "full_name": "KEVIN Engine Volume",
       "type": "numeric",
       "is_objective": false,
       "goal": "max",
@@ -32,7 +32,7 @@
       "format": "number:1 | taSuffix:' stars'",
       "range": {
         "low": 0,
-        "high": 5
+        "high": 5 
       },
       "description": "Average user-generated vehicle ratings and reviews that were submitted on Edmunds.com"
     },
@@ -61,7 +61,7 @@
     {
       "key": "MPGCombined",
       "full_name": "MPG Combined",
-      "type": "numeric",
+      "type": "NUMERIC",
       "is_objective": false,
       "goal": "max",
       "format": "number:1 | taSuffix:' MPG'",
@@ -81,7 +81,6 @@
         "price": 32900,
         "engineSize": 2.4,
         "power": 201,
-        "MPGCombined": 30,
         "averageRating": 4.05,
         "reviewsCount": 15
       }

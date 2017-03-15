@@ -26,10 +26,18 @@ require('./config/express')(app);
 
 var watson = require('watson-developer-cloud');
 var vcapServices = require('vcap_services');
+/*
+"credentials": {
+                "url": "https://gateway.watsonplatform.net/tradeoff-analytics/api",
+                "password": "EEJbQPh8U5vD",
+                "username": "e06ab132-3166-4794-8224-4d08f01d8fc2"
+            },
+
+*/
 
 var credentials = Object.assign({
-  username: process.env.TRADEOFF_ANALYTICS_USERNAME || '<username>',
-  password: process.env.TRADEOFF_ANALYTICS_PASSWORD || '<username>',
+  username: process.env.TRADEOFF_ANALYTICS_USERNAME || 'e06ab132-3166-4794-8224-4d08f01d8fc2',
+  password: process.env.TRADEOFF_ANALYTICS_PASSWORD || 'EEJbQPh8U5vD',
   url: process.env.TRADEOFF_ANALYTICS_URL || 'https://gateway.watsonplatform.net/tradeoff-analytics/api',
   version: 'v1',
 }, vcapServices.getCredentials('tradeoff_analytics'));
